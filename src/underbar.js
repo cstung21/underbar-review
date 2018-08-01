@@ -345,12 +345,14 @@
   _.shuffle = function(array) {
     var newArray = []
     while (newArray.length !== array.length) {
-      var new 
-    }
-    // [1,2,3,4,5]
-    // slice(0,2) = [1,2]  
-    // slice(3) = [4,5]
+      var randomInt = Math.floor(Math.random() * array.length);
+      var randomElement = array[randomInt]
+      if (!newArray.includes(randomElement)) {
+        newArray.push(randomElement);
+      }
 
+    }
+    return newArray;
   };
 
 
